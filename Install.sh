@@ -9,7 +9,7 @@ osascript -e "tell application \"Terminal\" to set normal text color of window 1
 clear && printf '\e[3J'
 
 printf '\n\n*****  Программа установки поддержки встроенной графики SandyBridge  ******\n'
-printf '*****                            Версия 3.5                          ******\n'
+printf '*****                            Версия 3.51                         ******\n'
 printf '*****  Только для операционной системы  MacOS 10.14 "Mojave"         ******\n'
 
 
@@ -87,11 +87,11 @@ if  cmp -s AppleGVA/17G65/AppleGVA.framework/Resources/version.plist /System/Lib
 fi
 
 
-if  cmp -s AppleGVA/17G5019/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
-     then 
-         gvastat=1
-         hsdef=17G5019
-fi 
+#if  cmp -s AppleGVA/17G5019/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
+#     then 
+#         gvastat=1
+#         hsdef=17G5019
+#fi 
 
 if  cmp -s AppleGVA/17G6030/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
     then
@@ -127,7 +127,7 @@ printf $hsbuild
 printf '\n'
 echo ""
 #echo ${Message}"1 - 17G65\n2 - 17G2208\n3 - 17G3025\n4 - 17G4015\n5 - 17G5019"${Blank}
-echo ${Message}"1 - 17G65\n2 - 17G2208\n3 - 17G3025\n4 - 17G5019\n5 - 17G6030"${Blank}
+echo ${Message}"1 - 17G65\n2 - 17G2208\n3 - 17G3025\n4 - 17G6030"${Blank}
 echo ""
 
 read -e operation
@@ -141,11 +141,11 @@ fi
 if [[ $operation == "3" ]];then
 hsbuild=17G3025
 fi
-if [[ $operation == "4" ]];then
-hsbuild=17G5019
-fi
+#if [[ $operation == "4" ]];then
+#hsbuild=17G5019
+#fi
 
-if [[ $operation == "5" ]];then
+if [[ $operation == "4" ]];then
 hsbuild=17G6030
 fi
  }

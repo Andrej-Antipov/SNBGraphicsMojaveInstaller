@@ -9,7 +9,7 @@ osascript -e "tell application \"Terminal\" to set normal text color of window 1
 clear && printf '\e[3J'
 
 printf '\n\n*****  Программа удаления поддержки встроенной графики SandyBridge   ******\n'
-printf '*****                            Версия 3.4                         ******\n'
+printf '*****                            Версия 3.51                         ******\n'
 printf '*****  Только для операционной системы  MacOS 10.14 "Mojave"         ******\n'
 
 sleep 1
@@ -95,11 +95,11 @@ if  cmp -s AppleGVA/17G65/AppleGVA.framework/Resources/version.plist /System/Lib
 fi
 
 
-if  cmp -s AppleGVA/17G5019/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
-     then 
-         gvastat=1
-         hsdef=17G5019
-fi 
+#if  cmp -s AppleGVA/17G5019/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
+#     then 
+#         gvastat=1
+#         hsdef=17G5019
+#fi 
 
 
 if  cmp -s AppleGVA/17G6030/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
