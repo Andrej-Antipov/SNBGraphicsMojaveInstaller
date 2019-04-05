@@ -95,19 +95,19 @@ if  cmp -s AppleGVA/17G65/AppleGVA.framework/Resources/version.plist /System/Lib
 fi
 
 
-#if  cmp -s AppleGVA/17G4015/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
-#    then
-#        gvastat=1
-#       hsdef=17G4015
-#fi
-
-
-
 if  cmp -s AppleGVA/17G5019/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
      then 
          gvastat=1
          hsdef=17G5019
 fi 
+
+
+if  cmp -s AppleGVA/17G6030/AppleGVA.framework/Resources/version.plist /System/Library/PrivateFrameworks/AppleGVA.framework/Resources/version.plist
+    then
+        gvastat=1
+       hsdef=17G6030
+fi
+
 
 if [[ $gvastat = 1 ]]; then
          printf '    !!!   AppleGVA от 10.13.6 ('
